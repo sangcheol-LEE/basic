@@ -1,4 +1,6 @@
 import React,{useState} from "react";
+import Average from "../Components/Average";
+import Counter from "../Components/Counter";
 import Info from "../Components/Info";
 
 
@@ -8,7 +10,12 @@ const App = () =>{
     <>
     <button onClick={() => {setVisible(!visible)}}>View</button>
     {visible && 
-    <Info /> }
+      <>
+        <Info /> 
+        <Counter />
+      </>
+    } 
+    <Average />
     </>
     );
 }
