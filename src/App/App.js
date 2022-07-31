@@ -1,9 +1,16 @@
-import EventPractice from "../Components/EventPractice";
+import React,{useState} from "react";
+import Info from "../Components/Info";
 
-function App() {
+
+const App = () =>{
+  const [visible, setVisible] = useState(false)
   return (
-    <EventPractice />
-  );
+    <>
+    <button onClick={() => {setVisible(!visible)}}>View</button>
+    {visible && 
+    <Info /> }
+    </>
+    );
 }
 
 export default App;
